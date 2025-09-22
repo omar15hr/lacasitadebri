@@ -1,11 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Award, Users, Clock } from "lucide-react";
+import CallToAction from "@/components/CallToAction";
+import Image from "next/image";
 
 export default function NosotrosPage() {
   return (
     <div className="min-h-screen bg-background">
-
       {/* Hero Section */}
       <section className="bg-muted py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,8 +27,10 @@ export default function NosotrosPage() {
               </p>
             </div>
             <div className="relative">
-              <img
-                src="/bakery-kitchen-with-bakers-working-artisan-cookies.jpg"
+              <Image
+                width={500}
+                height={500}
+                src="/cookie.jpg"
                 alt="Nuestra cocina artesanal"
                 className="rounded-lg shadow-2xl w-full h-auto"
               />
@@ -63,16 +66,20 @@ export default function NosotrosPage() {
                   casera.
                 </p>
               </div>
-              <img
-                src="/woman-baking-cookies-in-home-kitchen-vintage-style.jpg"
+              <Image
+                width={500}
+                height={500}
+                src="/cookie.jpg"
                 alt="María en su cocina original"
                 className="rounded-lg shadow-lg w-full h-auto"
               />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <img
-                src="/modern-bakery-storefront-new-york-city.jpg"
+              <Image
+                width={500}
+                height={500}
+                src="/cookie.jpg"
                 alt="Nuestra tienda en NYC"
                 className="rounded-lg shadow-lg w-full h-auto md:order-1"
               />
@@ -185,11 +192,13 @@ export default function NosotrosPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-8 w-96 mx-auto">
             <Card className="text-center">
               <CardContent className="p-6">
-                <img
-                  src="/hispanic-woman-baker-chef-portrait-professional.jpg"
+                <Image
+                  width={500}
+                  height={500}
+                  src="/cookie.jpg"
                   alt="María González"
                   className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
                 />
@@ -205,71 +214,12 @@ export default function NosotrosPage() {
                 </p>
               </CardContent>
             </Card>
-
-            <Card className="text-center">
-              <CardContent className="p-6">
-                <img
-                  src="/young-man-baker-assistant-portrait-professional.jpg"
-                  alt="Carlos Mendoza"
-                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-                />
-                <h3 className="text-xl font-semibold text-foreground mb-2">
-                  Carlos Mendoza
-                </h3>
-                <p className="text-primary font-medium mb-3">
-                  Maestro Pastelero
-                </p>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Especialista en técnicas tradicionales y creador de nuestras
-                  recetas más innovadoras.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardContent className="p-6">
-                <img
-                  src="/woman-customer-service-representative-friendly-por.jpg"
-                  alt="Ana Rivera"
-                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-                />
-                <h3 className="text-xl font-semibold text-foreground mb-2">
-                  Ana Rivera
-                </h3>
-                <p className="text-primary font-medium mb-3">
-                  Gerente de Tienda
-                </p>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Ana se asegura de que cada cliente tenga una experiencia
-                  excepcional en nuestra tienda.
-                </p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-muted">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-balance">
-            ¿Quieres ser parte de nuestra historia?
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8 text-pretty">
-            Visítanos en nuestro local en Broadway y descubre por qué somos la
-            panadería favorita de Nueva York.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition-colors">
-              Visítanos Hoy
-            </button>
-            <button className="border border-border px-6 py-3 rounded-lg font-medium hover:bg-accent transition-colors">
-              Síguenos en Redes
-            </button>
-          </div>
-        </div>
-      </section>
-
+      <CallToAction />
     </div>
   );
 }
