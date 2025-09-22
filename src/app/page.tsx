@@ -10,45 +10,44 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative bg-secondary">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <Badge variant="secondary" className="mb-4 bg-primary text-primary-foreground">
-                Desde 2010
-              </Badge>
-              <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6 text-balance text-warm">
-                Las mejores galletas artesanales de{" "}
-                <span className="text-primary">Nueva York</span>
-              </h1>
-              <p className="text-xl text-primary/80 mb-8 text-pretty leading-relaxed">
-                Cada galleta es una obra de arte hecha con ingredientes premium,
-                recetas tradicionales y el amor que solo Nueva York puede
-                ofrecer.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  asChild
-                  size="lg"
-                  className="btn-primary"
-                >
-                  <Link href="/productos">Ver Catálogo</Link>
-                </Button>
-                <Button size="lg" className="btn-accent">
-                  <Link href="/nosotros">Nuestra Historia</Link>
-                </Button>
-              </div>
-            </div>
-            <div className="relative">
-              <Image
-                src="/cookie.png"
-                alt="Vitrina de galletas artesanales"
-                width={500}
-                height={500}
-                className="rounded-lg shadow-2xl w-full h-auto card-warm"
-              />
-            </div>
-          </div>
+      <section className="relative min-h-120 md:min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/cookie.png"
+            alt="Galletas artesanales"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/30"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+          <Badge
+            variant="secondary"
+            className="mb-6 bg-white/20 text-white border-white/30 backdrop-blur-sm"
+          >
+            Desde 2010
+          </Badge>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-balance leading-tight">
+            Galletas Artesanales
+            <span className="block text-4xl md:text-5xl lg:text-6xl text-white/90 font-light mt-2">
+              de Nueva York
+            </span>
+          </h1>
+          <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed">
+            Ingredientes premium, recetas tradicionales y el amor de Nueva York
+            en cada bocado
+          </p>
+          <Button
+            size="lg"
+            className="bg-white hover:bg-white/90 text-primary cursor-pointer rounded-full"
+          >
+            <Link href="/contacto">Contáctanos Ahora</Link>
+          </Button>
         </div>
       </section>
 
@@ -72,11 +71,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Button
-              asChild
-              size="lg"
-              className="btn-secondary"
-            >
+            <Button asChild size="lg" className="btn-secondary rounded-full text-white">
               <Link href="/productos">Ver Todos los Productos</Link>
             </Button>
           </div>
@@ -191,11 +186,7 @@ export default function Home() {
 
           {/* Call to action */}
           <div className="text-center mt-12">
-            <Button
-              asChild
-              size="lg"
-              className="btn-accent"
-            >
+            <Button asChild size="lg" className="btn-accent rounded-full text-white">
               <Link
                 href="https://instagram.com/lacasitadebri"
                 target="_blank"

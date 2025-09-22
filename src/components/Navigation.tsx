@@ -27,18 +27,18 @@ export function Navigation() {
   };
 
   return (
-    <nav className="bg-[#8C5245] sticky top-0 z-50 shadow-sm">
+    <nav className="bg-secondary sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
-            <div className="text-2xl font-bold text-[#F2D95C] group-hover:text-[#F2D95C]/80 transition-colors duration-200">
+            <div className="text-2xl font-bold text-primary transition-colors duration-200">
               La Casita de Bri
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8 text-[#F2D95C]">
+          <div className="hidden md:flex items-center space-x-8">
             <Link href="/" className={getLinkClasses("/")}>
               Inicio
             </Link>
@@ -58,7 +58,7 @@ export function Navigation() {
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#D2F25E]"
+                className="text-primary"
               >
                 <FacebookIcon />
               </Link>
@@ -66,11 +66,11 @@ export function Navigation() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#D2F25E]"
+                className="text-primary"
               >
                 <InstagramIcon />
               </Link>
-              <Button className="bg-[#D2F25E] hover:bg-[#D2F25E]/90 text-[#8C5245] hover:text-[#8C5245]/80 cursor-pointer hover:scale-102">
+              <Button className="bg-[#D2F25E] hover:bg-[#D2F25E]/90 text-[#8C5245] hover:text-[#8C5245]/80 cursor-pointer hover:scale-102 shadow rounded-full">
                 Contáctanos Ahora
               </Button>
             </div>
@@ -96,7 +96,7 @@ export function Navigation() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-3 pt-3 pb-4 space-y-2 text-[#D2F25E]">
+            <div className="px-3 pt-3 pb-4 space-y-2">
               <Link
                 href="/"
                 className={getLinkClasses("/", true)}
@@ -125,7 +125,7 @@ export function Navigation() {
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-[#feee5b] text-gray-700 hover:text-gray-900 hover:bg-[#feee5b]/80 transition-all duration-200"
+                  className="p-2 rounded-full text-primary-foreground transition-all duration-200"
                 >
                   <FacebookIcon />
                 </Link>
@@ -133,7 +133,7 @@ export function Navigation() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-[#feee5b] text-gray-700 hover:text-gray-900 hover:bg-[#feee5b]/80 transition-all duration-200"
+                  className="p-2 rounded-full text-primary-foreground transition-all duration-200"
                 >
                   <InstagramIcon />
                 </Link>

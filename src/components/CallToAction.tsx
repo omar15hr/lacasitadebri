@@ -14,11 +14,11 @@ export default function CallToAction() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
             size="lg"
-            className="btn-primary cursor-pointer"
+            className="btn-primary cursor-pointer rounded-full text-white"
           >
             Contáctanos Ahora
           </Button>
-          <Button size="lg" className="btn-secondary cursor-pointer">
+          <Button size="lg" className="btn-secondary cursor-pointer rounded-full text-white">
             Ver Catálogo
           </Button>
         </div>
