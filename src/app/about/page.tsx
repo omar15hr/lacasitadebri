@@ -8,19 +8,19 @@ export default function NosotrosPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="bg-muted py-20">
+      <section className="bg-secondary py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge variant="secondary" className="mb-4">
+              <Badge className="mb-4 bg-primary text-primary-foreground">
                 Nuestra Historia
               </Badge>
-              <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
+              <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6 text-balance text-warm">
                 Horneando sueños desde el corazón de{" "}
                 <span className="text-primary">Nueva York</span>
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed text-pretty">
-                Sweet Dreams nació en 2020 con una misión simple: crear las
+              <p className="text-xl text-primary/80 leading-relaxed text-pretty">
+                La Casita de Bri nació en 2020 con una misión simple: crear las
                 mejores galletas artesanales de Nueva York usando solo
                 ingredientes premium y recetas tradicionales perfeccionadas con
                 amor.
@@ -30,9 +30,9 @@ export default function NosotrosPage() {
               <Image
                 width={500}
                 height={500}
-                src="/cookie.jpg"
+                src="/cookie.png"
                 alt="Nuestra cocina artesanal"
-                className="rounded-lg shadow-2xl w-full h-auto"
+                className="rounded-lg shadow-2xl w-full h-auto card-warm"
               />
             </div>
           </div>
@@ -43,15 +43,15 @@ export default function NosotrosPage() {
       <section className="py-20 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              La Historia de Sweet Dreams
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6 text-warm">
+              La Historia de La Casita de Bri
             </h2>
           </div>
 
           <div className="space-y-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl font-semibold text-foreground mb-4">
+                <h3 className="text-2xl font-semibold text-primary mb-4 text-warm">
                   Los Comienzos
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
@@ -69,9 +69,9 @@ export default function NosotrosPage() {
               <Image
                 width={500}
                 height={500}
-                src="/cookie.jpg"
+                src="/cookie.png"
                 alt="María en su cocina original"
-                className="rounded-lg shadow-lg w-full h-auto"
+                className="rounded-lg shadow-lg w-full h-auto card-warm"
               />
             </div>
 
@@ -79,12 +79,12 @@ export default function NosotrosPage() {
               <Image
                 width={500}
                 height={500}
-                src="/cookie.jpg"
+                src="/cookie.png"
                 alt="Nuestra tienda en NYC"
-                className="rounded-lg shadow-lg w-full h-auto md:order-1"
+                className="rounded-lg shadow-lg w-full h-auto md:order-1 card-warm"
               />
               <div className="md:order-2">
-                <h3 className="text-2xl font-semibold text-foreground mb-4">
+                <h3 className="text-2xl font-semibold text-primary mb-4 text-warm">
                   El Crecimiento
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
@@ -107,7 +107,7 @@ export default function NosotrosPage() {
       <section className="py-20 bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6 text-warm">
               Nuestros Valores
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
@@ -117,12 +117,12 @@ export default function NosotrosPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center">
+            <Card className="text-center card-warm">
               <CardContent className="p-6">
                 <div className="flex justify-center mb-4">
                   <Heart className="h-12 w-12 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
+                <h3 className="text-xl font-semibold text-primary mb-3 text-warm">
                   Amor en cada galleta
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -132,12 +132,12 @@ export default function NosotrosPage() {
               </CardContent>
             </Card>
 
-            <Card className="text-center">
+            <Card className="text-center card-warm">
               <CardContent className="p-6">
                 <div className="flex justify-center mb-4">
                   <Award className="h-12 w-12 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
+                <h3 className="text-xl font-semibold text-primary mb-3 text-warm">
                   Ingredientes Premium
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -147,12 +147,12 @@ export default function NosotrosPage() {
               </CardContent>
             </Card>
 
-            <Card className="text-center">
+            <Card className="text-center card-warm">
               <CardContent className="p-6">
                 <div className="flex justify-center mb-4">
                   <Users className="h-12 w-12 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
+                <h3 className="text-xl font-semibold text-primary mb-3 text-warm">
                   Comunidad
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -162,12 +162,12 @@ export default function NosotrosPage() {
               </CardContent>
             </Card>
 
-            <Card className="text-center">
+            <Card className="text-center card-warm">
               <CardContent className="p-6">
                 <div className="flex justify-center mb-4">
                   <Clock className="h-12 w-12 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
+                <h3 className="text-xl font-semibold text-primary mb-3 text-warm">
                   Tradición
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
@@ -184,7 +184,7 @@ export default function NosotrosPage() {
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6 text-warm">
               Conoce a Nuestro Equipo
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
@@ -193,16 +193,16 @@ export default function NosotrosPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-1 gap-8 w-96 mx-auto">
-            <Card className="text-center">
+            <Card className="text-center card-warm">
               <CardContent className="p-6">
                 <Image
                   width={500}
                   height={500}
-                  src="/cookie.jpg"
+                  src="/cookie.png"
                   alt="María González"
                   className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
                 />
-                <h3 className="text-xl font-semibold text-foreground mb-2">
+                <h3 className="text-xl font-semibold text-primary mb-2 text-warm">
                   María González
                 </h3>
                 <p className="text-primary font-medium mb-3">
@@ -210,7 +210,7 @@ export default function NosotrosPage() {
                 </p>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   Con más de 20 años de experiencia en repostería, María es el
-                  corazón y alma de Sweet Dreams.
+                  corazón y alma de La Casita de Bri.
                 </p>
               </CardContent>
             </Card>

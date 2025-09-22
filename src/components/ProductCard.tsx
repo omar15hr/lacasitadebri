@@ -16,16 +16,16 @@ interface ProductCardProps {
 
 export default function ProductCard({ producto }: ProductCardProps) {
   return (
-    <Card className="group hover:shadow-lg transition-all duration-300">
+    <Card className="group card-warm hover:scale-105 transition-all duration-300">
       <CardContent className="p-6">
         <Image
-          src="/cookie.jpg"
+          src="/cookie.png"
           alt={`Galletas ${producto.nombre.toLowerCase()}`}
           width={500}
           height={500}
-          className="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-48 object-cover rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300"
         />
-        <h3 className="text-xl font-semibold text-foreground mb-2">
+        <h3 className="text-xl font-semibold text-primary mb-2 text-warm">
           {producto.nombre}
         </h3>
         <p className="text-muted-foreground mb-4">{producto.descripcion}</p>
@@ -34,12 +34,12 @@ export default function ProductCard({ producto }: ProductCardProps) {
             {[...Array(producto.rating)].map((_, i) => (
               <Star
                 key={i}
-                className="h-4 w-4 fill-yellow-400 text-yellow-400"
+                className="h-4 w-4 fill-secondary text-secondary"
               />
             ))}
           </div>
           {producto.badges.map((badge, index) => (
-            <Badge key={index} variant="secondary" className="bg-[#feee5b]">
+            <Badge key={index} className="bg-accent text-accent-foreground">
               {badge}
             </Badge>
           ))}
