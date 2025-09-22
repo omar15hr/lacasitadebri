@@ -51,14 +51,14 @@ export function Navigation() {
                 Inicio
               </Link>
               <Link
-                href="/productos"
+                href="/products"
                 className="block px-3 py-2 text-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Productos
               </Link>
               <Link
-                href="/nosotros"
+                href="/about"
                 className="block px-3 py-2 text-foreground hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >

@@ -1,9 +1,7 @@
-import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Navigation } from "@/components/Navigation";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Heart, Users, Award } from "lucide-react";
+import { Star } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
@@ -157,40 +155,109 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Instagram Section */}
       <section className="py-20 bg-muted">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                <Heart className="h-12 w-12 text-primary" />
-              </div>
-              <div className="text-3xl font-bold text-foreground mb-2">
-                50K+
-              </div>
-              <div className="text-muted-foreground">Galletas Vendidas</div>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-2">
+              SÍGUENOS EN INSTAGRAM
+            </p>
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+              @LACASITADEBRI
+            </h2>
+          </div>
+
+          {/* Bento Grid */}
+          <div className="grid grid-cols-12 grid-rows-8 gap-3 h-[600px] md:h-[500px]">
+            {/* Large image - top left */}
+            <div className="col-span-6 md:col-span-4 row-span-4 relative overflow-hidden rounded-xl bg-gradient-to-br from-pink-100 to-orange-100 group cursor-pointer">
+              <img
+                src="/chocolate-chip-cookies-stack.png"
+                alt="Galletas artesanales"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                <Users className="h-12 w-12 text-primary" />
-              </div>
-              <div className="text-3xl font-bold text-foreground mb-2">2K+</div>
-              <div className="text-muted-foreground">Clientes Felices</div>
+
+            {/* Medium image - top center */}
+            <div className="col-span-6 md:col-span-4 row-span-3 relative overflow-hidden rounded-xl bg-gradient-to-br from-blue-100 to-purple-100 group cursor-pointer">
+              <img
+                src="/red-velvet-cookies-with-cream-cheese.jpg"
+                alt="Red velvet cookies"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                <Award className="h-12 w-12 text-primary" />
-              </div>
-              <div className="text-3xl font-bold text-foreground mb-2">15+</div>
-              <div className="text-muted-foreground">Variedades</div>
+
+            {/* Small image - top right */}
+            <div className="col-span-6 md:col-span-4 row-span-2 relative overflow-hidden rounded-xl bg-gradient-to-br from-yellow-100 to-orange-100 group cursor-pointer">
+              <img
+                src="/oatmeal-raisin-cookies-rustic-style.jpg"
+                alt="Galletas de avena"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-            <div className="text-center">
-              <div className="flex justify-center mb-4">
-                <Star className="h-12 w-12 text-primary" />
-              </div>
-              <div className="text-3xl font-bold text-foreground mb-2">4.9</div>
-              <div className="text-muted-foreground">Rating Promedio</div>
+
+            {/* Medium image - middle left */}
+            <div className="col-span-6 md:col-span-3 row-span-3 relative overflow-hidden rounded-xl bg-gradient-to-br from-green-100 to-blue-100 group cursor-pointer">
+              <img
+                src="/artisan-cookies-display-case-in-modern-bakery.jpg"
+                alt="Vitrina de galletas"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
+
+            {/* Large square - middle center */}
+            <div className="col-span-6 md:col-span-5 row-span-4 relative overflow-hidden rounded-xl bg-gradient-to-br from-purple-100 to-pink-100 group cursor-pointer">
+              <img
+                src="/chocolate-chip-cookies-stack.png"
+                alt="Proceso de horneado"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </div>
+
+            {/* Tall image - right side */}
+            <div className="col-span-6 md:col-span-4 row-span-6 relative overflow-hidden rounded-xl bg-gradient-to-br from-indigo-100 to-purple-100 group cursor-pointer">
+              <img
+                src="/red-velvet-cookies-with-cream-cheese.jpg"
+                alt="Ingredientes premium"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </div>
+
+            {/* Small bottom left */}
+            <div className="col-span-6 md:col-span-3 row-span-1 relative overflow-hidden rounded-xl bg-gradient-to-br from-orange-100 to-red-100 group cursor-pointer">
+              <img
+                src="/oatmeal-raisin-cookies-rustic-style.jpg"
+                alt="Detalle de textura"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </div>
+
+            {/* Medium bottom center */}
+            <div className="col-span-6 md:col-span-5 row-span-1 relative overflow-hidden rounded-xl bg-gradient-to-br from-teal-100 to-green-100 group cursor-pointer">
+              <img
+                src="/artisan-cookies-display-case-in-modern-bakery.jpg"
+                alt="Empaque artesanal"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </div>
+          </div>
+
+          {/* Call to action */}
+          <div className="text-center mt-12">
+            <Button asChild size="lg" className="text-lg">
+              <Link href="https://instagram.com/lacasitadebri" target="_blank" rel="noopener noreferrer">
+                Síguenos en Instagram
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
