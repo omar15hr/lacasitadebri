@@ -180,44 +180,6 @@ export default function NosotrosPage() {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6 text-warm">
-              Conoce a Nuestro Equipo
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-              Las personas apasionadas que hacen posible cada galleta perfecta.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-1 gap-8 w-96 mx-auto">
-            <Card className="text-center card-warm">
-              <CardContent className="p-6">
-                <Image
-                  width={500}
-                  height={500}
-                  src="/cookie.png"
-                  alt="María González"
-                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-                />
-                <h3 className="text-xl font-semibold text-primary mb-2 text-warm">
-                  María González
-                </h3>
-                <p className="text-primary font-medium mb-3">
-                  Fundadora & Chef Principal
-                </p>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Con más de 20 años de experiencia en repostería, María es el
-                  corazón y alma de La Casita de Bri.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* Call to Action */}
       <CallToAction />
     </div>

@@ -21,7 +21,7 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-primary-foreground mb-4 text-warm">Enlaces</h3>
             <div className="space-y-2">
-              <Link href="/" className="block text-sm text-primary-foreground/70 hover:text-secondary transition-colors">
+              <Link href="/" className="block text-md text-primary-foreground/70 hover:text-secondary transition-colors">
                 Inicio
               </Link>
               <Link
@@ -32,7 +32,7 @@ export function Footer() {
               </Link>
               <Link
                 href="/nosotros"
-                className="block text-sm text-primary-foreground/70 hover:text-secondary transition-colors"
+                className="block text-md text-primary-foreground/70 hover:text-secondary transition-colors"
               >
                 Nosotros
               </Link>
@@ -43,19 +43,19 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-primary-foreground mb-4 text-warm">Contacto</h3>
             <div className="space-y-3">
-              <div className="flex items-center space-x-2 text-sm text-primary-foreground/70">
+              <div className="flex items-center space-x-2 text-md text-primary-foreground/70">
                 <MapPin className="h-4 w-4 text-secondary" />
-                <span>123 Broadway, NYC</span>
+                <span>Región Metropolitana, Chile</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-primary-foreground/70">
+              <div className="flex items-center space-x-2 text-md text-primary-foreground/70">
                 <Phone className="h-4 w-4 text-secondary" />
                 <span>(555) 123-4567</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-primary-foreground/70">
+              <div className="flex items-center space-x-2 text-md text-primary-foreground/70">
                 <Mail className="h-4 w-4 text-secondary" />
                 <span>info@lacasitadebri.com</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-primary-foreground/70">
+              <div className="flex items-center space-x-2 text-md text-primary-foreground/70">
                 <Clock className="h-4 w-4 text-secondary" />
                 <span>Lun-Dom: 8AM-8PM</span>
               </div>
@@ -64,7 +64,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
-          <p className="text-sm text-primary-foreground/60">© 2024 La Casita de Bri NYC. Todos los derechos reservados.</p>
+          <p className="text-sm text-primary-foreground/60">© 2025 La Casita de Bri. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

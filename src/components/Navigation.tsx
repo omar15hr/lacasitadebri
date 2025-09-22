@@ -18,12 +18,12 @@ export function Navigation() {
       : "px-4 py-2 font-medium transition-all duration-200 relative";
 
     if (isActive) {
-      return `${baseClasses} after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#feee5b] ${
+      return `${baseClasses} after:content-[''] after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-[#FEEE5B] ${
         isMobile ? "after:rounded-full" : ""
       }`;
     }
 
-    return `${baseClasses} hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:h-0.5 hover:after:bg-[#feee5b]`;
+    return `${baseClasses} hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:right-0 hover:after:h-0.5 hover:after:bg-[#FEEE5B]`;
   };
 
   return (
@@ -70,7 +70,7 @@ export function Navigation() {
               >
                 <InstagramIcon />
               </Link>
-              <Button className="bg-[#D2F25E] hover:bg-[#D2F25E]/90 text-[#8C5245] hover:text-[#8C5245]/80 cursor-pointer hover:scale-102 shadow rounded-full">
+              <Button className="bg-[#FEEE5B] hover:bg-[#FEEE5B]/90 text-[#8C5245] hover:text-[#8C5245]/80 cursor-pointer hover:scale-102 shadow rounded-full">
                 Contáctanos Ahora
               </Button>
             </div>
