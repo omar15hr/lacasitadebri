@@ -46,7 +46,7 @@ export default function Home() {
             size="lg"
             className="bg-white hover:bg-white/90 text-primary cursor-pointer rounded-full"
           >
-            <Link href="/contacto">Contáctanos Ahora</Link>
+            <Link href="/">Contáctanos Ahora</Link>
           </Button>
         </div>
       </section>
@@ -188,7 +188,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Button asChild size="lg" className="btn-accent rounded-full text-white">
               <Link
-                href="https://instagram.com/lacasitadebri"
+                href="https://www.instagram.com/lacasitadebri/"
                 target="_blank"
                 rel="noopener noreferrer"
               >

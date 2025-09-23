@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "./ui/button";
 
 export default function CallToAction() {
@@ -16,10 +17,10 @@ export default function CallToAction() {
             size="lg"
             className="btn-primary cursor-pointer rounded-full text-white"
           >
-            Contáctanos Ahora
+            <Link href="/">Contáctanos Ahora</Link>
           </Button>
           <Button size="lg" className="btn-secondary cursor-pointer rounded-full text-white">
-            Ver Catálogo
+            <Link href="/products">Ver Catálogo</Link>
           </Button>
         </div>
       </div>

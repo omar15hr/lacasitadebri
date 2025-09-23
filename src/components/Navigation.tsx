@@ -55,15 +55,7 @@ export function Navigation() {
             {/* Social Media Icons - Desktop */}
             <div className="hidden md:flex items-center space-x-3">
               <Link
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary"
-              >
-                <FacebookIcon />
-              </Link>
-              <Link
-                href="https://instagram.com"
+                href="https://www.instagram.com/lacasitadebri/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary"
