@@ -5,7 +5,7 @@ export const productos = [
     descripcion: "La receta perfecta con chocolate belga premium y mantequilla europea.",
     imagen: "/cookie.png",
     categoria: "Clásicas",
-    rating: 5,
+    price: 12,
     badges: ["Bestseller"],
   },
   {
@@ -14,7 +14,7 @@ export const productos = [
     descripcion: "Suave textura aterciopelada con glaseado de queso crema artesanal.",
     imagen: "/cookie.png",
     categoria: "Especiales",
-    rating: 5,
+    price: 15,
     badges: ["Especial"],
   },
   {
@@ -23,7 +23,7 @@ export const productos = [
     descripcion: "Receta familiar con avena orgánica y pasas sultanas seleccionadas.",
     imagen: "/cookie.png",
     categoria: "Saludables",
-    rating: 5,
+    price: 10,
     badges: ["Saludable"],
   },
   {
@@ -32,7 +32,7 @@ export const productos = [
     descripcion: "Para los amantes del chocolate: doble chocolate con trozos de fudge.",
     imagen: "/cookie.png",
     categoria: "Especiales",
-    rating: 5,
+    price: 16,
     badges: ["Intenso"],
   },
   {
@@ -41,7 +41,7 @@ export const productos = [
     descripcion: "Cremosa mantequilla de maní natural con un toque de sal marina.",
     imagen: "/cookie.png",
     categoria: "Clásicas",
-    rating: 4,
+    price: 11,
     badges: ["Sin Gluten"],
   },
   {
@@ -50,8 +50,8 @@ export const productos = [
     descripcion: "Refrescante combinación de limón orgánico con un toque de lavanda.",
     imagen: "/cookie.png",
     categoria: "Gourmet",
-    rating: 5,
-    badges: ["Gourmet", "Nuevo"],
+    price: 18,
+    badges: ["Gourmet"],
   },
   {
     id: 7,
@@ -59,7 +59,7 @@ export const productos = [
     descripcion: "Clásica galleta americana con canela de Ceilán y azúcar cristalizada.",
     imagen: "/cookie.png",
     categoria: "Clásicas",
-    rating: 4,
+    price: 13,
     badges: ["Tradicional"],
   },
   {
@@ -68,7 +68,7 @@ export const productos = [
     descripcion: "Nueces de macadamia premium con chocolate blanco belga.",
     imagen: "/cookie.png",
     categoria: "Premium",
-    rating: 5,
+    price: 22,
     badges: ["Premium"],
   },
   {
@@ -77,7 +77,7 @@ export const productos = [
     descripcion: "100% vegana con coco orgánico y almendras tostadas.",
     imagen: "/cookie.png",
     categoria: "Veganas",
-    rating: 4,
-    badges: ["Vegana", "Orgánica"],
+    price: 14,
+    badges: ["Vegana"],
   },
 ]
