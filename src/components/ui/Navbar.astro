@@ -1,0 +1,110 @@
+---
+import Cart from "../shared/icons/Cart.astro";
+import Logo from "../shared/icons/Logo.astro";
+
+const navLinks = [
+  { name: "Inicio", href: "/" },
+  { name: "Ver catálogo", href: "/catalogo" },
+  { name: "Zonas de reparto", href: "/zonas" },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-primary backdrop-blur-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      <div class="flex items-center flex-1">
+        <button
+          id="mobile-menu-btn"
+          aria-label="Abrir menú"
+          class="p-2 -ml-2 mr-2 md:hidden text-gray-600 hover:text-rose-600 transition-colors rounded-lg focus:ring-2 focus:ring-rose-500 outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+        <nav class="hidden md:flex space-x-8">
+          {
+            navLinks.map((link) => (
+              <a
+                href={link.href}
+                class="text-muted text-base transition-colors duration-200"
+              >
+                {link.name}
+              </a>
+            ))
+          }
+        </nav>
+      </div>
+
+      <div class="shrink-0 flex items-center justify-center">
+        <a href="/" class="flex items-center gap-2 group outline-none">
+          <Logo />
+        </a>
+      </div>
+
+      <div class="flex items-center justify-end flex-1 gap-3 sm:gap-5">
+        <a
+          href="/ordenar"
+          class="hidden sm:inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-black rounded-full hover:bg-rose-600 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 outline-none"
+        >
+          Ordenar ahora
+        </a>
+
+        <button
+          aria-label="Ver carrito"
+          class="relative p-2 text-gray-600 hover:text-rose-600 transition-colors rounded-full hover:bg-rose-50 focus:ring-2 focus:ring-rose-500 outline-none"
+        >
+          <Cart />
+          <span
+            class="absolute top-0 right-0 w-4 h-4 bg-rose-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center border border-white"
+          >
+            0
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 absolute w-full shadow-lg"
+  >
+    <div class="px-4 pt-2 pb-6 space-y-1">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-rose-600 hover:bg-rose-50 rounded-lg transition-colors"
+          >
+            {link.name}
+          </a>
+        ))
+      }
+      <div class="px-3 pt-4">
+        <a href="/ordenar" class="c"> Ordenar ahora </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  const btn = document.getElementById("mobile-menu-btn");
+  const menu = document.getElementById("mobile-menu");
+
+  if (btn && menu) {
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  }
+</script>

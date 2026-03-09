@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #feee5b;
+
+  --color-muted: #131313;
+
+  --font-sans: "Gluten Variable", sans-4serif;
+  --font-climate: "Climate Crisis Variable", sans-serif;
+}
