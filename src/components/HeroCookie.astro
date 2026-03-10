@@ -1,0 +1,68 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section class="relative w-full overflow-hidden bg-white">
+  <div
+    class="bg-primary relative pt-20 pb-10 min-h-125 flex flex-col md:flex-row items-center border-b-2 border-transparent"
+  >
+    <div
+      class="w-full relative z-20 md:z-40 flex-1 text-center sm:text-left max-w-7xl mx-auto px-6"
+    >
+      <h1
+        class="climate text-muted leading-[0.8] uppercase flex flex-col tracking-tight wrap-break-word"
+      >
+        <span class="block text-6xl sm:text-7xl md:text-8xl lg:text-9xl"
+          >Cookies</span
+        >
+
+        <span
+          class="hidden md:flex items-baseline gap-4 md:gap-7 whitespace-nowrap"
+        >
+          <span class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl"
+            >for the</span
+          >
+          <span
+            class="text-transparent text-5xl sm:text-9xl px-6"
+            style="-webkit-text-stroke: min(4px, 0.4vw) var(--color-muted);"
+            >soul</span
+          >
+        </span>
+
+        <span
+          class="block md:hidden text-6xl sm:text-7xl md:text-8xl lg:text-9xl"
+          >for the</span
+        >
+        <span
+          class="block md:hidden text-6xl sm:text-7xl md:text-8xl lg:text-9xl"
+          >soul</span
+        >
+      </h1>
+    </div>
+
+    <div
+      class="relative w-[130%] right-[-12%] mt-5 -mb-[30%] sm:-mb-[20%] md:absolute md:right-0 md:top-1/2 md:-translate-y-[35%] md:w-[65%] lg:w-[60%] xl:w-[50%] md:mb-0 z-30 pointer-events-none flex justify-end"
+    >
+      <Image
+        src="/hero-cookie.png"
+        alt="Hero cookie image"
+        width={1000}
+        height={1000}
+        class="w-full h-auto object-contain max-w-150 md:max-w-200 lg:max-w-250"
+      />
+    </div>
+  </div>
+
+  <div class="bg-white relative z-10 px-5 py-10">
+    <div
+      class="max-w-xl lg:max-w-2xl text-gray-primary text-base md:text-lg lg:text-xl font-extralight ml-0 md:ml-[5%] lg:ml-[10%]"
+    >
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+        varius, ligula at pretium fermentum, nunc erat aliquet nisl, id laoreet
+        nisl lorem sed justo. Suspendisse potenti. Curabitur ac augue vitae
+        turpis tempor volutpat. Integer eget arcu sed neque volutpat posuere.
+      </p>
+    </div>
+  </div>
+</section>

@@ -14,6 +14,9 @@ importers:
       '@fontsource-variable/gluten':
         specifier: ^5.2.8
         version: 5.2.8
+      '@fontsource/climate-crisis':
+        specifier: ^5.2.11
+        version: 5.2.11
       '@tailwindcss/vite':
         specifier: ^4.2.1
         version: 4.2.1(vite@6.4.1(jiti@2.6.1)(lightningcss@1.31.1))
@@ -384,6 +387,9 @@ packages:
 
   '@fontsource-variable/gluten@5.2.8':
     resolution: {integrity: sha512-rcHHoJkww0wFziQX+IADMTnamPgZaTfqu7PkSPaJTZY3Dbh/16x8AA7xeusPXV6RgM8/jjdGBXaaD+d8zd9i/g==}
+
+  '@fontsource/climate-crisis@5.2.11':
+    resolution: {integrity: sha512-UsHd1wlMKsETnrHMSed/MfCenaqhY8SRKdXm0dJENo2PT1CI8v3DLgAGfgv9AKkIl73KlANSMBZqNc/hxayuOQ==}
 
   '@img/colour@1.1.0':
     resolution: {integrity: sha512-Td76q7j57o/tLVdgS746cYARfSyxk8iEfRxewL9h4OMzYhbW4TAcppl0mT4eyqXddh6L/jwoM75mo7ixa/pCeQ==}
@@ -2118,6 +2124,8 @@ snapshots:
   '@fontsource-variable/climate-crisis@5.2.11': {}
 
   '@fontsource-variable/gluten@5.2.8': {}
+
+  '@fontsource/climate-crisis@5.2.11': {}
 
   '@img/colour@1.1.0':
     optional: true

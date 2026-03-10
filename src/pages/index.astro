@@ -1,7 +1,14 @@
 ---
+import CookieBanner from "../components/CookieBanner.astro";
+import FavoritesCookies from "../components/FavoritesCookies.astro";
+import HeroCookie from "../components/HeroCookie.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Inicio | La Casita de Bri">
-  <main></main>
+  <main>
+    <HeroCookie />
+    <FavoritesCookies />
+    <CookieBanner />
+  </main>
 </Layout>

@@ -2,9 +2,7 @@
 
 @theme {
   --color-primary: #feee5b;
-
+  --color-gray-primary: #6e6e6e;
+  --color-gray-secondary: #f5f3eb;
   --color-muted: #131313;
-
-  --font-sans: "Gluten Variable", sans-4serif;
-  --font-climate: "Climate Crisis Variable", sans-serif;
 }
