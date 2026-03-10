@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/vercel": "^9.0.4",
     "@fontsource-variable/climate-crisis": "^5.2.11",
     "@fontsource-variable/gluten": "^5.2.8",
     "@fontsource/climate-crisis": "^5.2.11",
