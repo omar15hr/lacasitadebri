@@ -1,0 +1,91 @@
+---
+import Facebook from "../shared/icons/Facebook.astro";
+import Instagram from "../shared/icons/Instagram.astro";
+import LogoBlanco from "../shared/icons/LogoBlanco.astro";
+import Whatsapp from "../shared/icons/Whatsapp.astro";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer
+  class="mt-auto bg-muted text-white pt-16 pb-8 px-6 flex flex-col items-center justify-center w-full"
+>
+  <div class="max-w-7xl w-full flex flex-col items-center gap-12">
+    <div
+      class="flex w-40 sm:w-80 justify-center hover:scale-105 transition-transform duration-300"
+    >
+      <LogoBlanco />
+    </div>
+
+    <h2
+      class="text-3xl md:text-7xl lg:text-8xl font-black text-center leading-tight max-w-5xl tracking-tight climate"
+    >
+      Hechas para romper la dieta
+    </h2>
+
+    <div
+      class="flex flex-col md:flex-row items-center justify-between w-full border-t-2 border-muted/10 pt-8 gap-8 text-white"
+    >
+      <nav
+        class="flex flex-col sm:flex-row gap-4 sm:gap-8 text-center sm:text-left font-semibold text-base md:text-xl"
+      >
+        <a
+          href="/contacto"
+          class="hover:underline underline-offset-4 decoration-4 decoration-white transition-all"
+          >Contacto</a
+        >
+        <a
+          href="/tiempo-de-entrega"
+          class="hover:underline underline-offset-4 decoration-4 decoration-white transition-all"
+          >Tiempo de entrega</a
+        >
+        <a
+          href="/zonas-de-reparto"
+          class="hover:underline underline-offset-4 decoration-4 decoration-white transition-all"
+          >Zonas de reparto</a
+        >
+      </nav>
+
+      <div class="flex items-center gap-5">
+        <a
+          href="#"
+          aria-label="Facebook"
+          class="size-10 bg-muted text-white rounded-full flex items-center justify-center hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl"
+        >
+          <Facebook />
+        </a>
+        <a
+          href="#"
+          aria-label="Instagram"
+          class="size-10 bg-muted text-white rounded-full flex items-center justify-center hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl"
+        >
+          <Instagram />
+        </a>
+        <a
+          href="#"
+          aria-label="WhatsApp"
+          class="size-10 bg-muted text-white rounded-full flex items-center justify-center hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl"
+        >
+          <Whatsapp />
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="flex flex-col md:flex-row items-center justify-center w-full text-white font-normal text-base pt-6 gap-8"
+    >
+      <p class="text-white">
+        &copy; {currentYear} La Casita de Bri. Todos los derechos reservados.
+      </p>
+      <p>
+        Diseñado y desarrollado por <a
+          href="https://peakstudio.cl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-white hover:underline decoration-2 underline-offset-4 transition-colors"
+          >peakstudio.cl</a
+        >
+      </p>
+    </div>
+  </div>
+</footer>

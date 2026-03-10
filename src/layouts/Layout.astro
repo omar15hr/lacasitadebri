@@ -1,0 +1,42 @@
+---
+import Footer from "../components/ui/Footer.astro";
+import Navbar from "../components/ui/Navbar.astro";
+import "@fontsource-variable/gluten";
+import "@fontsource/climate-crisis";
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{Astro.props.title}</title>
+  </head>
+  <body>
+    <Navbar />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    font-family: "Gluten Variable", sans-serif;
+    overflow-x: hidden;
+  }
+
+  .climate {
+    font-family: "Climate Crisis", system-ui;
+  }
+</style>
