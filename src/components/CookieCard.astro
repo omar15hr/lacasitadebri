@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  cookie: CollectionEntry<"cookies">;
+}
+
+const { cookie } = Astro.props;
+
+function formatPrice(price: number) {
+  return new Intl.NumberFormat("es-CL", {
+    style: "currency",
+    currency: "CLP",
+    maximumFractionDigits: 0,
+  }).format(price);
+}
+---
+
+<a href={`/cookies/${cookie.id}`} class="block group">
+  <div class="flex flex-col gap-3">
+    <div
+      class="relative w-full aspect-square rounded-3xl overflow-hidden bg-gray-secondary"
+    >
+      <Image
+        src={cookie.data.image}
+        alt={cookie.data.name}
+        width={300}
+        height={288}
+        class="absolute inset-0 w-full h-full object-contain p-4 drop-shadow-lg group-hover:scale-105 transition-transform duration-300"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+
+    <div class="flex flex-col gap-0.5 px-1">
+      <span
+        class="text-lg font-extrabold text-muted leading-snug transition-colors"
+      >
+        {cookie.data.name}
+      </span>
+      <span class="text-base text-gray-primary leading-snug">
+        {formatPrice(cookie.data.price)}
+      </span>
+    </div>
+  </div>
+</a>
