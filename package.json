@@ -9,12 +9,20 @@
     "astro": "astro"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@astrojs/vercel": "^10.0.0",
+=======
+    "@astrojs/vercel": "^9.0.4",
+>>>>>>> f8cd9b4066c05bad3a5fcd2b7f1239dc8a8ec36d
     "@fontsource-variable/climate-crisis": "^5.2.11",
     "@fontsource-variable/gluten": "^5.2.8",
     "@fontsource/climate-crisis": "^5.2.11",
     "@tailwindcss/vite": "^4.2.1",
+<<<<<<< HEAD
     "astro": "^6.0.2",
+=======
+    "astro": "^5.17.1",
+>>>>>>> f8cd9b4066c05bad3a5fcd2b7f1239dc8a8ec36d
     "tailwindcss": "^4.2.1"
   }
 }
