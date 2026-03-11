@@ -5,6 +5,27 @@ import LogoBlanco from "../shared/icons/LogoBlanco.astro";
 import Whatsapp from "../shared/icons/Whatsapp.astro";
 
 const currentYear = new Date().getFullYear();
+
+const phone = "56949218394";
+const message = encodeURIComponent(
+  "Hola, me gustaría obtener más información sobre las galletas",
+);
+
+const navlinks = [
+  { title: "Contacto", href: `https://wa.me/${phone}?text=${message}` },
+  { title: "Tiempo de entrega", href: "/tiempo-de-entrega" },
+  { title: "Zonas de reparto", href: "/zonas-de-reparto" },
+];
+
+const socialLinks = [
+  {
+    title: "Facebook",
+    icon: Facebook,
+    href: `https://wa.me/${phone}?text=${message}`,
+  },
+  { title: "Instagram", icon: Instagram, href: "/tiempo-de-entrega" },
+  { title: "Whatsapp", icon: Whatsapp, href: "/zonas-de-reparto" },
+];
 ---
 
 <footer
@@ -29,45 +50,30 @@ const currentYear = new Date().getFullYear();
       <nav
         class="flex flex-col sm:flex-row gap-4 sm:gap-8 text-center sm:text-left font-semibold text-base md:text-xl"
       >
-        <a
-          href="/contacto"
-          class="hover:underline underline-offset-4 decoration-4 decoration-white transition-all"
-          >Contacto</a
-        >
-        <a
-          href="/tiempo-de-entrega"
-          class="hover:underline underline-offset-4 decoration-4 decoration-white transition-all"
-          >Tiempo de entrega</a
-        >
-        <a
-          href="/zonas-de-reparto"
-          class="hover:underline underline-offset-4 decoration-4 decoration-white transition-all"
-          >Zonas de reparto</a
-        >
+        {
+          navlinks.map((link) => (
+            <a
+              href={link.href}
+              class="hover:underline underline-offset-4 decoration-4 decoration-white transition-all"
+            >
+              {link.title}
+            </a>
+          ))
+        }
       </nav>
 
       <div class="flex items-center gap-5">
-        <a
-          href="#"
-          aria-label="Facebook"
-          class="size-10 bg-muted text-white rounded-full flex items-center justify-center hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl"
-        >
-          <Facebook />
-        </a>
-        <a
-          href="#"
-          aria-label="Instagram"
-          class="size-10 bg-muted text-white rounded-full flex items-center justify-center hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl"
-        >
-          <Instagram />
-        </a>
-        <a
-          href="#"
-          aria-label="WhatsApp"
-          class="size-10 bg-muted text-white rounded-full flex items-center justify-center hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl"
-        >
-          <Whatsapp />
-        </a>
+        {
+          socialLinks.map(({ href, title, icon: Icon }) => (
+            <a
+              href={href}
+              aria-label={title}
+              class="size-10 bg-muted text-white rounded-full flex items-center justify-center hover:scale-110 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              <Icon />
+            </a>
+          ))
+        }
       </div>
     </div>
 

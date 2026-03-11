@@ -1,0 +1,129 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import Add from "../components/shared/icons/Add.astro";
+import Remove from "../components/shared/icons/Remove.astro";
+
+const cookies = await getCollection("cookies");
+const sortedCookies = cookies.sort((a, b) =>
+  a.data.name.localeCompare(b.data.name),
+);
+---
+
+<Layout title="Arma tu caja | La Casita de Bri">
+  <section
+    class="min-h-screen w-full bg-[#fcfbf9] relative pt-24 md:pt-32 pb-20"
+  >
+    <div class="max-w-400 w-full mx-auto px-6 md:px-12 lg:px-24">
+      <div class="mb-12 lg:mb-16 text-center lg:text-left">
+        <h1
+          class="climate text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[0.9] text-muted drop-shadow-sm mb-4 lg:mb-6"
+        >
+          Arma tu caja
+        </h1>
+        <p class="text-gray-primary text-lg sm:text-xl font-light w-full">
+          Elige y combina tus galletas favoritas para crear tu caja perfecta.
+          <strong class="font-bold text-gray-primary"
+            >Hechas a mano y recién horneadas.</strong
+          >
+        </p>
+      </div>
+
+      <div
+        class="flex flex-col xl:flex-row gap-8 lg:gap-16 items-start relative"
+      >
+        <div class="flex-1 w-full grid grid-cols-1 md:grid-cols-2 gap-6 pb-20">
+          {
+            sortedCookies.map((cookie) => (
+              <div class="bg-white rounded-2xl p-4 sm:p-5 flex items-center gap-3 sm:gap-4 shadow min-w-0">
+                <div class="w-20 sm:w-24 shrink-0 pointer-events-none bg-gray-secondary rounded-lg">
+                  <Image
+                    src={cookie.data.image}
+                    alt={cookie.data.name}
+                    width={200}
+                    height={200}
+                    class="w-full h-auto object-contain drop-shadow-sm mix-blend-multiply"
+                  />
+                </div>
+
+                <div class="flex-1 min-w-0 py-1">
+                  <h3 class="climate text-muted text-sm md:text-base leading-tight mb-1 tracking-wide truncate">
+                    {cookie.data.name}
+                  </h3>
+                  <p class="text-gray-primary text-xs font-light leading-snug line-clamp-2">
+                    {cookie.data.description}
+                  </p>
+
+                  <div class="flex items-center gap-3 mt-3 flex-nowrap">
+                    <button
+                      class="bg-gray-secondary size-8 shrink-0 rounded-full flex items-center justify-center text-muted transition-colors cursor-pointer hover:bg-gray-primary/30"
+                      aria-label="Aumentar cantidad"
+                    >
+                      <Add />
+                    </button>
+                    <span class="text-muted text-base sm:text-lg min-w-4 text-center tracking-wide font-black">
+                      0
+                    </span>
+                    <button
+                      class="bg-gray-secondary size-8 shrink-0 rounded-full flex items-center justify-center text-muted transition-colors cursor-pointer hover:bg-gray-primary/30"
+                      aria-label="Disminuir cantidad"
+                    >
+                      <Remove />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+
+        <div class="w-full lg:w-95 shrink-0 sticky top-24 z-20">
+          <div class="bg-muted text-white rounded-4xl">
+            <h2 class="text-xl sm:text-2xl tracking-wide p-4 text-center">
+              Resumen del pedido
+            </h2>
+
+            <div class="space-y-4 text-sm sm:text-base bg-white">
+              <div
+                class="flex justify-between items-end border-b border-white/10 p-4"
+              >
+                <span class="text-gray-primary font-light">Tamaño caja</span>
+                <span class="tracking-widest text-muted">6 pack</span>
+              </div>
+
+              <div
+                class="flex justify-between items-end border-b border-white/10 p-4"
+              >
+                <span class="text-gray-primary font-light">Galleta elegida</span
+                >
+                <span class="tracking-widest text-muted">4</span>
+              </div>
+
+              <div
+                class="flex justify-between items-end border-b border-white/10 p-4"
+              >
+                <span class="text-gray-primary font-light">Galleta elegida</span
+                >
+                <span class="tracking-widest text-muted">2</span>
+              </div>
+            </div>
+
+            <div
+              class="flex justify-between items-center bg-white/5 rounded-2xl p-4"
+            >
+              <span class="text-xl tracking-wide">Total</span>
+              <span class="text-xl tracking-wider text-white">$9.990</span>
+            </div>
+          </div>
+
+          <button
+            class="w-full bg-muted text-white rounded-full py-4 px-6 mt-5 font-extrabold text-base hover:-translate-y-1 transition-transform cursor-pointer border-4 border-muted hover:bg-black text-center flex items-center justify-center gap-3"
+          >
+            Pedir por WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
